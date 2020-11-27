@@ -18,11 +18,6 @@
 - Styled with CSS Flexbox
 - Implement 2 media queries for responsive design on 3 screen sizes (including desktop).
 
-## POST-MVP
-
-- Implement a favorite button that puts the most like user contributions at the top of the comment section.
-
-
 <br>
 
 ### Goals
@@ -128,14 +123,14 @@ src
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+Implement a favorite button that puts the most like user contributions at the top of the comment section.
 
 ***
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+> TBD
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+> TBD
