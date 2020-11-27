@@ -2,7 +2,7 @@
 
 ## Overview
 
-_**Flying Coach** is a travel guide for users visiting places abroad with low cost activities available at their destination. Users can contribute ideas/options under each destination available.
+**Flying Coach** is a travel guide for users visiting places abroad with low cost activities available at their destination. Users can contribute ideas/options under each destination available.
 
 
 <br>
@@ -37,6 +37,7 @@ _**Flying Coach** is a travel guide for users visiting places abroad with low co
 | :--------------: | :----------------------------------------- |
 |      React       | React will be used to create the front-end |
 |   React Router   | Will be used to lay out links/routes for all the pages |
+|   Axios   | Allows front-end to make axios calls |
 | Styled Components | Will be installing this dependency in case I need to target something specific |
 |     Rails      | Will be used to host back end data/authentification endpoints |
 |  Postgresql     | Relational database management system that will be installed to access SQL easily |
