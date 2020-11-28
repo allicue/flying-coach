@@ -137,21 +137,22 @@ src
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
 | Create Migration Tables/Models    |    H     |     2 hrs      |     TBD     |    TBD   |
-| Create Seed Data    |   M     |    1 hr      |     TBD     |    TBD   |
+| Create Seed Data    |   M     |    2 hrs      |     TBD     |    TBD   |
 | Create Controller Methods/Routes |    H     |     3 hrs      |     TBD     |     TBD     |
 | Create Authentification Methods/Routes |    H     |     2 hrs      |     TBD     |     TBD     |
 | Test/Debug Routes |    M     |     1 hr      |     TBD     |     TBD     |
 | Connect Backend to Frontend |    M     |     .5 hrs      |     TBD     |     TBD     |
 | Build out React File Structure |    L     |     1 hr      |     TBD     |     TBD     |
 | Create Methods/Build out Services Folder  |    H     |     2.5 hrs      |     TBD     |     TBD     |
-| Build out/render all user authentification logic |    M     |     3 hrs      |     TBD     |     TBD     |
+| Build out User Authentification Screens |    M     |     2 hrs      |     TBD     |     TBD     |
+| Build out User Authentification Logic |    M     |     3 hrs      |     TBD     |     TBD     |
 | Render all Destinations  |    M     |     2 hrs      |     TBD     |     TBD     |
 | Render Specific Destination Details/Activities    |    H     |     4 hrs      |     TBD     |    TBD   |
 | Build out CRUD Functionality/Screens for Activities   |    H     |     6 hrs      |     TBD     |    TBD   |
 | CSS Styling    |    M     |     6 hrs      |     TBD     |    TBD   |
 | Create Mobile/Tablet Media Query    |    H     |     3 hrs      |     TBD     |    TBD   |
 | Deployment    |    H     |     1 hr      |     TBD     |    TBD   |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| TOTAL               |          |     40 hrs      |     3 hrs     |     TBD     |
 
 <br>
 
