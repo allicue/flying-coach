@@ -43,15 +43,13 @@
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
-
-![Dummy Link](url)
+![Link](https://wireframe.cc/qoEXRv)
 
 - Desktop Landing
 
-![Dummy Link](url)
+![Link](https://wireframe.cc/N3vGyK)
 
-- Desktop Hero
+- Desktop Register Page
 
 ![Dummy Link](url)
 
