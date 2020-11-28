@@ -136,11 +136,22 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create Migration Tables/Models    |    H     |     1 hr      |     TBD     |    TBD   |
+| Create Seed Data    |   M     |    1 hr      |     TBD     |    TBD   |
+| Create Controller Methods/Routes |    H     |     3 hrs      |     TBD     |     TBD     |
+| Create Authentification Methods/Routes |    H     |     1 hr      |     TBD     |     TBD     |
+| Test/Debug Routes |    M     |     .5 hrs      |     TBD     |     TBD     |
+| Connect Backend to Frontend |    M     |     .5 hrs      |     TBD     |     TBD     |
+| Build out React File Structure |    L     |     .5 hrs      |     TBD     |     TBD     |
+| Create Methods/Build out Services Folder  |    H     |     2.5 hrs      |     TBD     |     TBD     |
+| Build out/render all user authentification logic |    M     |     3 hrs      |     TBD     |     TBD     |
+| Render all Destinations  |    M     |     2 hrs      |     TBD     |     TBD     |
+| Render Specific Destination Details/Activities    |    H     |     3 hrs      |     TBD     |    TBD   |
+| Build out CRUD Functionality/Screens for Activities   |    H     |     4 hrs      |     TBD     |    TBD   |
+| CSS Styling    |    H     |     5 hrs      |     TBD     |    TBD   |
+| Create Mobile/Tablet Media Query    |    H     |     3 hrs      |     TBD     |    TBD   |
+| Deployment    |    H     |     1 hr      |     TBD     |    TBD   |
 | TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
-
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
 <br>
 
