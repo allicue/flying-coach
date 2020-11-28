@@ -70,7 +70,11 @@
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
+[Component tree](https://whimsical.com/flying-coach-PAoJWob1iJJRq6RirEr1AQ)
+
+> ![component tree](https://i.imgur.com/MXcjJU7.png)
+
+
 
 #### Component Hierarchy
 
@@ -90,11 +94,6 @@ src
 
 ```
 
-#### Component Tree
-
-> Use this section to include a link to your component tree.
-
-[Component tree](url)
 
 #### Time Estimates
 
