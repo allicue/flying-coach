@@ -43,7 +43,7 @@
 
 #### Wireframes
 
-ALL WIREFRAMES/FLOW: https://lucid.app/lucidchart/24039598-51b3-4048-bc21-ce497b6a0700/edit?beaconFlowId=07043DB2FC2A10D3&page=0_0#?folder_id=home&browser=icon
+- ALL WIREFRAMES/FLOW: https://lucid.app/lucidchart/24039598-51b3-4048-bc21-ce497b6a0700/edit?beaconFlowId=07043DB2FC2A10D3&page=0_0#?folder_id=home&browser=icon
 
 - Desktop Landing: https://wireframe.cc/qoEXRv
 
