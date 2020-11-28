@@ -83,14 +83,49 @@
 ``` structure
 
 src
+|__ App.js
+|__ App.css
+|__ index.js
+|__ index.css
 |__ assets/
-      |__ fonts
-      |__ graphics
+      |__ icons
       |__ images
-      |__ mockups
 |__ components/
       |__ Header.jsx
+      |__ Header.css
+|__ containers/
+      |__ MainContainer.jsx
+      |__ MainContainer.css
+|__ layouts/
+      |__ Layout.jsx
+      |__ Layout.css
+|__ screens/
+      |__ Homepage
+            |__ Homepage.jsx
+            |__ Homepage.css
+      |__ Register
+            |__ Register.jsx
+            |__ Register.css
+      |__ Login
+            |__ Login.jsx
+            |__ Login.css
+      |__ AllDestinations
+            |__ AllDestinations.jsx
+            |__ AllDestinations.css
+      |__ DestinationDetails
+            |__ DestinationDetails.jsx
+            |__ DestinationDetails.css
+      |__ AddActivity
+            |__ AddActivity.jsx
+            |__ AddActivity.css
+      |__ EditActivity
+            |__ EditActivity.jsx
+            |__ EditActivity.css
 |__ services/
+      |__ apiConfig.js
+      |__ auth.js
+      |__ destinations.js
+      |__ activites.js
 
 ```
 
