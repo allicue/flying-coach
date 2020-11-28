@@ -152,7 +152,7 @@ src
 | CSS Styling    |    M     |     6 hrs      |     TBD     |    TBD   |
 | Create Mobile/Tablet Media Query    |    H     |     3 hrs      |     TBD     |    TBD   |
 | Deployment    |    H     |     1 hr      |     TBD     |    TBD   |
-| TOTAL               |          |     40 hrs      |     3 hrs     |     TBD     |
+| TOTAL               |          |     41 hrs      |     TBD     |     TBD     |
 
 <br>
 
