@@ -43,32 +43,30 @@
 
 #### Wireframes
 
-ALL WIREFRAMES/FLOW:
-https://lucid.app/lucidchart/24039598-51b3-4048-bc21-ce497b6a0700/edit?beaconFlowId=07043DB2FC2A10D3&page=0_0#?folder_id=home&browser=icon
+ALL WIREFRAMES/FLOW: https://lucid.app/lucidchart/24039598-51b3-4048-bc21-ce497b6a0700/edit?beaconFlowId=07043DB2FC2A10D3&page=0_0#?folder_id=home&browser=icon
 
-![https://wireframe.cc/qoEXRv](https://wireframe.cc/qoEXRv)
-- Desktop Landing
+- Desktop Landing: https://wireframe.cc/qoEXRv
 
-![Link](https://wireframe.cc/N3vGyK)
-- Desktop Register Page
 
-![Dummy Link](https://wireframe.cc/tTRprm)
-- Desktop Login Page
+- Desktop Register Page: https://wireframe.cc/N3vGyK
 
-![Dummy Link](https://wireframe.cc/jSnV4B)
-- Desktop View All Destinations Page
 
-![Dummy Link](https://wireframe.cc/p3x65i)
-- Desktop View One Destination Page While Logged In
+- Desktop Login Page: https://wireframe.cc/tTRprm
 
-![Dummy Link](https://wireframe.cc/8wWoQU)
-- Desktop View One Destination Page While Not Logged In
 
-![Dummy Link](https://wireframe.cc/OwqGuJ)
-- Desktop View Edit Activity Page
+- Desktop View All Destinations Page: https://wireframe.cc/jSnV4B
 
-![Dummy Link](https://wireframe.cc/bpVloe)
-- Desktop View Add Activity Page
+
+- Desktop View One Destination Page While Logged In: https://wireframe.cc/p3x65i
+
+
+- Desktop View One Destination Page While Not Logged In: https://wireframe.cc/8wWoQU
+
+
+- Desktop View Edit Activity Page: https://wireframe.cc/OwqGuJ
+
+
+- Desktop View Add Activity Page: https://wireframe.cc/bpVloe
 
 #### Component Tree
 
