@@ -2,7 +2,7 @@
 
 ## Overview
 
-**Flying Coach** is a travel guide for users visiting places abroad with low cost activities available at their destination. Users can contribute ideas/options under each destination available.
+**Flying Coach** is a travel guide for users visiting places abroad with low cost activities available at their destination. Users can contribute activities under each available destination.
 
 
 <br>
