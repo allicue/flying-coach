@@ -17,7 +17,8 @@ class ActivitiesController < ApplicationController
   # POST /activities
   def create
     @activity = Activity.new(activity_params)
-
+    
+    @activity.user = @current_user
     if @activity.save
       render json: @activity, status: :created, location: @activity
     else
