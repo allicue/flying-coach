@@ -15,7 +15,7 @@
 - Consume data from **Ruby on Rails API**, and render that data in your components.
 - Utilize **React Router**, for client-side routing.
 - Demonstrate Full CRUD actions on the front end for a non-user table
-- Styled with CSS Flexbox
+- Style with CSS Flexbox
 - Implement 2 media queries for responsive design on 3 screen sizes (including desktop).
 
 <br>
