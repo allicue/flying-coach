@@ -164,7 +164,11 @@ src
 
 ## Post-MVP
 
-Implement a favorite button that puts the most like user contributions at the top of the comment section.
+- Implement a favorite button that puts the most like user contributions at the top of the comment section.
+
+- Create more sections of data for each destination (currency, languages spoken, etc.)
+
+- Create a search bar to search for a destination
 
 ***
 
