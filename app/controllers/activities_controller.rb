@@ -17,10 +17,10 @@ class ActivitiesController < ApplicationController
   # POST /activities
   def create
     @activity = Activity.new(activity_params)
-    
+
     @activity.user = @current_user
     if @activity.save
-      render json: @activity, status: :created, location: @activity
+      render json: @activity, status: :created
     else
       render json: @activity.errors, status: :unprocessable_entity
     end
