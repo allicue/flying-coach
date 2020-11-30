@@ -6,11 +6,12 @@ class DestinationsController < ApplicationController
     @destinations = Destination.all
 
     render json: @destinations
+
   end
 
   # GET /destinations/1
   def show
-    render json: @destination
+    render json: @destination, include: :activities, status: :ok
   end
 
   # POST /destinations

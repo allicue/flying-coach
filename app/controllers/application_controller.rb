@@ -13,9 +13,9 @@ class ApplicationController < ActionController::API
 
   def authorize_request
     header = request.headers['Authorization']
-    header = header.split(' ').last if header
+    token = header.split(' ').last if header
     begin
-      @decoded = decode(header)
+      @decoded = decode(token)
       @current_user = User.find(@decoded[:id])
     rescue ActiveRecord::RecordNotFound => e
       render json: { errors: e.message }, status: :unauthorized
@@ -23,5 +23,5 @@ class ApplicationController < ActionController::API
       render json: { errors: e.message }, status: :unauthorized
     end
   end
-  
+
 end
