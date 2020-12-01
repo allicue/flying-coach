@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Register(props) {
   const [formData, setFormData] = useState({
@@ -21,34 +22,35 @@ export default function Register(props) {
       props.handleRegister(formData);
     }}>
       <h3>Register</h3>
-      <label>Username:
+      <label className='form-label'>Username:</label>
         <input
           type='text'
           name='username'
+          placeholder='Username'
           value={formData.username}
           onChange={handleChange}
         />
-      </label>
       <br />
-      <label>Email:
+      <label className='form-label'>Email:</label>
         <input
           type='text'
           name='email'
+          placeholder='Email'
           value={formData.email}
           onChange={handleChange}
         />
-      </label>
       <br />
-      <label>Password:
+      <label className='form-label'>Password:</label>
         <input
           type='password'
           name='password'
+          placeholder='Password'
           value={formData.password}
           onChange={handleChange}
         />
-      </label>
       <br />
       <button>Submit</button>
+      <p>Already have an account? <Link to="/login">Login here.</Link></p>
     </form>
   )
 }
