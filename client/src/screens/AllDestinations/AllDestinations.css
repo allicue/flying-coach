@@ -1,0 +1,25 @@
+.all-destinations {
+  text-align: center;
+}
+
+.destinations-container{
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  width: 100%;
+}
+
+.thumbnail-images {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+.thumbnail-text {
+  font-size: 40px;
+  font-weight: bold;
+}
