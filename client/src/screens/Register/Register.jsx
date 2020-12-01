@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MainContainer(props) {
+function Register(props) {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function MainContainer(props) {
   );
 }
 
-export default MainContainer;
+export default Register;
