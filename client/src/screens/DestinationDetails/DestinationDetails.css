@@ -1,0 +1,87 @@
+.hero-img {
+  height:400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+.country-title {
+  color: black;
+  font-size: 100px;
+}
+
+.country-about-container {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.column {
+  width: 50%;
+}
+
+.about-img {
+  width: 90%;
+}
+
+.about-section-text {
+  margin-top: 0px;
+  text-transform: uppercase;
+}
+
+.about-text {
+  text-align: justify;
+  line-height: 30px;
+}
+
+.activities-title-container {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.activities-container {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+}
+
+.activity-container {
+  width: 450px;
+  /* height: 400px; */
+  margin-left: 20px;
+}
+
+.activity-images {
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+.activity-title {
+  color: white;
+  font-weight: bold;
+}
+
+.activity-description {
+  height: 250px;
+  padding: 0px 4px 0px 4px;
+  line-height: 27px;
+  text-align: justify;
+  overflow: auto;
+}
+
+.activity-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 4px 0px 4px;
+}

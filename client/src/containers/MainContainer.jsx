@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import AllDestinations from '../screens/AllDestinations/AllDestinations';
+import DestinationDetails from '../screens/DestinationDetails/DestinationDetails';
 // import FoodCreate from '../screens/FoodCreate';
 // import FoodEdit from '../screens/FoodEdit';
 // import Foods from '../screens/Foods';
@@ -47,6 +48,10 @@ function MainContainer(props) {
   return (
     <div>
       <Switch>
+
+        <Route path='/destinations/:id'>
+          <DestinationDetails activities={activities} handleDelete={handleDelete} currentUser={props.currentUser} destinations={destinations}></DestinationDetails>
+        </Route>
         <Route path='/destinations'>
           <AllDestinations destinations={destinations}></AllDestinations>
         </Route>

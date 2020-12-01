@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './AllDestinations.css'
 
 function AllDestinations(props) {
@@ -9,11 +10,13 @@ function AllDestinations(props) {
       <section className='destinations-container'>
         {
           props.destinations.map(destination => (
-            <React.Fragment key={destination.id}>
-              <div className='thumbnail-images' style={{ backgroundImage: `url(${destination.hero_img})` }}>
-                <p className='thumbnail-text'>{destination.country_name}</p>
-              </div>
-            </React.Fragment>
+            <Link to={`/destinations/${destination.id}`}>
+              <React.Fragment key={destination.id}>
+                <div className='thumbnail-images' style={{ backgroundImage: `url(${destination.hero_img})` }}>
+                  <p className='thumbnail-text'>{destination.country_name}</p>
+                </div>
+                </React.Fragment>
+            </Link>
           ))
           }
         </section>
