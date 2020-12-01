@@ -1,0 +1,36 @@
+.hero-img {
+  height:400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+.country-title {
+  color: black;
+  font-size: 100px;
+}
+
+.country-about-container {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.column {
+  width: 50%;
+}
+
+.about-img {
+  width: 90%;
+}
+
+.about-section-text {
+  margin-top: 0px;
+  text-transform: uppercase;
+}
+
+.about-text {
+  text-align: justify;
+  line-height: 30px;
+}
