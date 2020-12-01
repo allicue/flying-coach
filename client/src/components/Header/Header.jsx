@@ -9,7 +9,7 @@ function Header(props) {
   return (
     <div className='header'>
       <div className='logo-section'>
-      <h1>Flying Coach</h1>
+      <Link id='header-logo' to="/destinations">Flying Coach</Link>
       </div>
       <div className='user-login-section'>
       {

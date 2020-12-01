@@ -4,6 +4,12 @@
   align-items: center;
 }
 
+#header-logo {
+  text-decoration: none;
+  font-size: 30px;
+  color: black;
+}
+
 .user-login-section {
   display: flex;
   align-items: center;
