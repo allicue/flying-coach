@@ -49,7 +49,7 @@ function MainContainer(props) {
     <div>
       <Switch>
 
-        <Route path='/destinations/:name'>
+        <Route path='/destinations/:id'>
           <DestinationDetails activities={activities} handleDelete={handleDelete} currentUser={props.currentUser} destinations={destinations}></DestinationDetails>
         </Route>
         <Route path='/destinations'>
