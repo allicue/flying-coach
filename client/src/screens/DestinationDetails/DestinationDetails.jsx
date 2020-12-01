@@ -9,10 +9,6 @@ function DestinationDetails(props) {
   // const [activities, setActivities] = useState([])
 
   const { id } = useParams()
-  // const params= useParams()
-  // const country = props.destinations.find((r) => r.country_name === params.name)
-
-  console.log(id)
 
   useEffect(() => {
     const fetchDestinations = async () => {
@@ -46,21 +42,31 @@ function DestinationDetails(props) {
         </section>
       </div>
 
+      <div className='activities-title-container'>
+          <h3>ACTIVITIES</h3>
+          <h3>ADD ACTIVITY</h3>
+      </div>
+      
       <div className='activities-container'>
 
         {
           destination.activities && (          
             destination.activities.map(activity => (
               <React.Fragment key={activity.id}>
-                <div className='activity-images' style={{ backgroundImage: `url(${activity.img_url})` }}>
-                  <p className='activity-title'>{activity.name}</p>
+                <div className='activity-container'>
+                  <div className='activity-images' style={{ backgroundImage: `url(${activity.img_url})` }}>
+                    <p className='activity-title'>{activity.name}</p>
+                  </div>
+                  <p className='activity-description'>{activity.description}</p>
+                  <div className='activity-footer'>
+                    <p>${parseInt(activity.price)}</p>
+                    <a rel="noreferrer" target="_blank" href={activity.activity_url}>See more</a>
+                  </div>
                 </div>
               </React.Fragment>
             ))
           )
-
         }
-
       </div>
       
     </div>
