@@ -5,6 +5,7 @@ import './DestinationDetails.css'
 function DestinationDetails(props) {
   const params = useParams()
   const country = props.destinations.find((r) => r.country_name === params.name)
+  // const activity = props.activities.find((r) => r.id === params.id)
   
   return (
     <div>
@@ -23,7 +24,15 @@ function DestinationDetails(props) {
       </div>
 
       <div className='activities-container'>
-
+      {
+          props.activities.map(activity => (
+            <React.Fragment key={activity.id}>
+              <div className='activity-images' style={{ backgroundImage: `url(${activity.img_url})` }}>
+                <p className='activity-title'>{activity.name}</p>
+              </div>
+              </React.Fragment>
+          ))
+          }
       </div>
       
     </div>
