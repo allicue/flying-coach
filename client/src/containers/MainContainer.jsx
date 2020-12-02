@@ -2,11 +2,10 @@ import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import AllDestinations from '../screens/AllDestinations/AllDestinations';
 import DestinationDetails from '../screens/DestinationDetails/DestinationDetails';
-// import FoodCreate from '../screens/FoodCreate';
-// import FoodEdit from '../screens/FoodEdit';
-// import Foods from '../screens/Foods';
 import { getAllDestinations } from '../services/destinations';
 import { postActivity, getAllActivities, getOneActivity, putActivity, destroyActivity } from '../services/activities';
+import Homepage from '../screens/Hompage/Homepage';
+import AddActivity from '../screens/AddActivity/AddActivity';
 
 function MainContainer(props) {
   const [destinations, setDestinations] = useState([])
@@ -29,7 +28,7 @@ function MainContainer(props) {
   const handleCreate = async (activityData) => {
     const newActivity = await postActivity(activityData)
     setActivities(prevState => [...prevState, newActivity])
-    history.push('/activities')
+    history.push('/destinations')
   }
 
   const handleUpdate = async (id, activityData) => {
@@ -37,7 +36,7 @@ function MainContainer(props) {
     setActivities(prevState => prevState.map(activity => {
       return activity.id === Number(id) ? updatedActivity : activity
     }))
-    history.push('/activities');
+    history.push('/destinations');
   }
 
   const handleDelete = async (id) => {
@@ -48,21 +47,19 @@ function MainContainer(props) {
   return (
     <div>
       <Switch>
-
+        
         <Route path='/destinations/:id'>
           <DestinationDetails activities={activities} handleDelete={handleDelete} currentUser={props.currentUser} destinations={destinations}></DestinationDetails>
         </Route>
         <Route path='/destinations'>
           <AllDestinations destinations={destinations}></AllDestinations>
         </Route>
+        <Route path='/add-activity'>
+          <AddActivity handleCreate={handleCreate} destinations={destinations} currentUser={props.currentUser}></AddActivity>
+        </Route>
+        <Homepage ></Homepage>
         {/* <Route path='/foods/:id/edit'>
           <FoodEdit handleUpdate={handleUpdate} foods={foods}></FoodEdit>
-        </Route>
-        <Route path='/foods/new'>
-          <FoodCreate handleCreate={handleCreate}></FoodCreate>
-        </Route>
-        <Route path='/foods'>
-          <Foods handleDelete={handleDelete} foods={foods} currentUser={props.currentUser}></Foods>
         </Route> */}
       </Switch>
     </div>

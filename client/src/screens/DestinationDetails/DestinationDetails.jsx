@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import './DestinationDetails.css'
 import { getOneDestination } from '../../services/destinations';
 // import { getAllActivities } from '../services/activities';
@@ -44,7 +44,7 @@ function DestinationDetails(props) {
 
       <div className='activities-title-container'>
           <h3>ACTIVITIES</h3>
-          <h3>ADD ACTIVITY</h3>
+          <Link to='/add-activity'><h3>ADD ACTIVITY</h3></Link>
       </div>
       
       <div className='activities-container'>
@@ -55,6 +55,8 @@ function DestinationDetails(props) {
               <React.Fragment key={activity.id}>
                 <div className='activity-container'>
                   <div className='activity-images' style={{ backgroundImage: `url(${activity.img_url})` }}>
+                    <button>EDIT</button>
+                    <button>DELETE</button>
                     <p className='activity-title'>{activity.name}</p>
                   </div>
                   <p className='activity-description'>{activity.description}</p>
