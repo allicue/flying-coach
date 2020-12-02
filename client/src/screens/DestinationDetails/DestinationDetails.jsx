@@ -6,7 +6,6 @@ import { getOneDestination } from '../../services/destinations';
 
 function DestinationDetails(props) {
   const [destination, setDestination] = useState([])
-  // const [activities, setActivities] = useState([])
 
   const { id } = useParams()
 
@@ -16,12 +15,7 @@ function DestinationDetails(props) {
       console.log(destinationData)
       setDestination(destinationData)
     }
-    // const fetchActivities = async () => {
-    //   const activityData = await getAllActivities()
-    //   setActivities(activityData)
-    // }
     fetchDestinations()
-    // fetchActivities()
   }, [id])
 
   return (
