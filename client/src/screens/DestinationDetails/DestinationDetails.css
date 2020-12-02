@@ -1,3 +1,7 @@
+.destination-detail-page {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .hero-img {
   height:400px;
   display: flex;
@@ -6,8 +10,10 @@
   background-size: cover;
 }
 .country-title {
-  color: black;
-  font-size: 100px;
+  color: #F1FAEE;
+  font-size: 150px;
+  font-family: 'Yellowtail', cursive;
+  text-shadow: 2px 2px #000000c0;
 }
 
 .country-about-container {
@@ -53,8 +59,7 @@
 }
 
 .activity-container {
-  width: 450px;
-  /* height: 400px; */
+  width: 400px;
   margin-left: 20px;
   border: 1px solid black;
 }

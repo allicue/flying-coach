@@ -1,3 +1,33 @@
+.login-screen {
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ margin:0 auto;
+ text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin:0 auto;
+  justify-content: center;
+  margin-top: 50px;
+}
+
 .form-label {
   display: none;
+}
+
+.login-input {
+  border-radius: 45px;
+  width: 500px;
+  height: 60px;
+  margin-bottom: 30px;
+  padding-left: 30px;
+  font-size: 20px;
+}
+
+.submit-button {
+  width: 500px;
 }
