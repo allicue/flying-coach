@@ -6,6 +6,7 @@ import { getAllDestinations } from '../services/destinations';
 import { postActivity, getAllActivities, getOneActivity, putActivity, destroyActivity } from '../services/activities';
 import Homepage from '../screens/Hompage/Homepage';
 import AddActivity from '../screens/AddActivity/AddActivity';
+import EditActivity from '../screens/EditActivity/EditActivity';
 
 function MainContainer(props) {
   const [destinations, setDestinations] = useState([])
@@ -42,6 +43,7 @@ function MainContainer(props) {
   const handleDelete = async (id) => {
     await destroyActivity(id)
     setActivities(prevState => prevState.filter(activity => activity.id !== id))
+    window.location.reload()
   }
 
   return (
@@ -55,12 +57,12 @@ function MainContainer(props) {
           <AllDestinations destinations={destinations}></AllDestinations>
         </Route>
         <Route path='/add-activity'>
-          <AddActivity handleCreate={handleCreate} destinations={destinations} currentUser={props.currentUser}></AddActivity>
+          <AddActivity handleCreate={handleCreate} destinations={destinations}></AddActivity>
+        </Route>
+        <Route path='/activities/:id'>
+          <EditActivity  handleUpdate={handleUpdate} activities={activities} destinations={destinations}></EditActivity>
         </Route>
         <Homepage ></Homepage>
-        {/* <Route path='/foods/:id/edit'>
-          <FoodEdit handleUpdate={handleUpdate} foods={foods}></FoodEdit>
-        </Route> */}
       </Switch>
     </div>
   );

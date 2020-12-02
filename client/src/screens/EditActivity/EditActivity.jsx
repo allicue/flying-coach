@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
-function AddActivity(props) {
+function EditActivity(props) {
   const [destinationId, setDestinationId] = useState(0)
+
   const [formData, setFormData] = useState({
     name: '',
     description: '',
@@ -11,8 +13,31 @@ function AddActivity(props) {
     destination_id: destinationId,
   })
 
+  console.log(formData)
+
+  const { id } = useParams();
+
+  console.log(id)
+  useEffect(() => {
+    const prefillForm = () => {
+      const activityItem = props.activities.find(activity => activity.id === Number(id));
+      setFormData({
+        name: activityItem.name,
+        description: activityItem.description,
+        img_url: activityItem.img_url,
+        price: activityItem.price,
+        activity_url: activityItem.activity_url,
+        destination_id: activityItem.destination_id,
+      })
+    }
+    if (props.activities.length){
+      prefillForm();
+    }
+  }, [props.activities])
+
+
   const handleChange = (e) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
       [name]: value
@@ -30,10 +55,10 @@ function AddActivity(props) {
 
   return (
     <div>
-      <h3>Add an Activity</h3>
+      <h3>Edit an Activity</h3>
       <form onSubmit={(e) => {
         e.preventDefault()
-        props.handleCreate(formData)
+        props.handleUpdate(id, formData)
       }}>
         <label htmlFor="name" className='form-label'>Name:</label>
         <input
@@ -87,4 +112,4 @@ function AddActivity(props) {
   );
 }
 
-export default AddActivity;
+export default EditActivity;

@@ -18,37 +18,36 @@ function Login(props) {
 
   return (
     <div>
-      <form onSubmit={(e) => {
-        e.preventDefault()
-        props.handleLogin(formData)
-      }}>
+      
+      <div className='login-screen'>
         <h3>LOG IN</h3>
-        <label className='form-label'>Username:</label>
-        <input
-          type='text'
-          name='username'
-          placeholder='Username'
-          value={formData.username}
-          onChange={handleChange}
-        />
-        
-
-        <br></br>
-
-        <label className='form-label'>Password:</label>
-        <input
-          type='password'
-          name='password'
-          placeholder='Password'
-          value={formData.password}
-          onChange={handleChange}
+      
+        <form className='form' onSubmit={(e) => {
+          e.preventDefault()
+          props.handleLogin(formData)
+        }}>
+          <label className='form-label'>Username:</label>
+          <input
+            className='login-input'
+            type='text'
+            name='username'
+            placeholder='Username'
+            value={formData.username}
+            onChange={handleChange}
           />
-        
-
-        <br></br>
-        <button>Submit</button>
-        <p>Don't have an account yet? <Link to="/register">Register here.</Link></p>
-      </form>
+          <label className='form-label'>Password:</label>
+          <input
+            className='login-input'
+            type='password'
+            name='password'
+            placeholder='Password'
+            value={formData.password}
+            onChange={handleChange}
+            />
+          <button className='submit-button'>Submit</button>
+          <p>Don't have an account yet? <Link to="/register">Register here.</Link></p>
+          </form>
+        </div>
     </div>
   );
 }

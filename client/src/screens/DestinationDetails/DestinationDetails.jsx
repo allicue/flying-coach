@@ -25,7 +25,7 @@ function DestinationDetails(props) {
   }, [id])
 
   return (
-    <div>
+    <div className='destination-detail-page'>
 
       
       <div className='hero-img' style={{ backgroundImage: `url(${destination.hero_img})` }}>
@@ -43,8 +43,16 @@ function DestinationDetails(props) {
       </div>
 
       <div className='activities-title-container'>
-          <h3>ACTIVITIES</h3>
+        <h3>ACTIVITIES</h3>
+        {
+        props.currentUser ?
+          <>
           <Link to='/add-activity'><h3>ADD ACTIVITY</h3></Link>
+          </>
+          :
+          <></>
+      }
+      
       </div>
       
       <div className='activities-container'>
@@ -55,8 +63,15 @@ function DestinationDetails(props) {
               <React.Fragment key={activity.id}>
                 <div className='activity-container'>
                   <div className='activity-images' style={{ backgroundImage: `url(${activity.img_url})` }}>
-                    <button>EDIT</button>
-                    <button>DELETE</button>
+                  {
+                    activity.user_id === props.currentUser?.id &&
+                    <>
+                    <div>
+                      <Link to={`/activities/${activity.id}`}><button>EDIT</button></Link>
+                      <button onClick={() => props.handleDelete(activity.id)}>Delete</button>
+                    </div>
+                    </>
+                  }
                     <p className='activity-title'>{activity.name}</p>
                   </div>
                   <p className='activity-description'>{activity.description}</p>

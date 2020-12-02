@@ -16,16 +16,16 @@ function Header(props) {
         currentUser ?
           <>
             <img className='cloud-img' alt="cloud" src={Cloud}/>
-            <p>{currentUser.username}</p>
-            <p>|</p>
-            <button onClick={props.handleLogout}>Logout</button>
+            <p>{currentUser.username} </p>
+            <p className='login-section-break'>|</p>
+            <button className='logout-button' onClick={props.handleLogout}>Logout</button>
           </>
           :
           <>
             <img className='cloud-img' alt="cloud" src={Cloud}/>
-            <Link to="/login">LOGIN</Link>
+            <Link className='login-section-links' to="/login">LOGIN</Link>
             <p>|</p>
-            <Link to="/register">REGISTER</Link>
+            <Link className='login-section-links' to="/register">REGISTER</Link>
           </>
       }
       </div>
