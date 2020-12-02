@@ -11,23 +11,7 @@ function AddActivity(props) {
     price: '',
     activity_url: '',
     destination_id: destinationId,
-    // user_id: {`${props.currentUser}`}
-
   })
-
-  console.log(formData)
-  
-
-  // const { id } = useParams()
-
-  // useEffect(() => {
-  //   const fetchDestinations = async () => {
-  //     const destinationData = await getOneDestination(id)
-  //     console.log(destinationData)
-  //     setDestination(destinationData)
-  //   }
-  //   fetchDestinations()
-  // }, [id])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -40,6 +24,10 @@ function AddActivity(props) {
   const handleDropDownChange = (e) => {
     const { value } = e.target;
     setDestinationId(value);
+    setFormData(prevState => ({
+      ...prevState,
+      destination_id: value
+    }))
   }
 
   return (

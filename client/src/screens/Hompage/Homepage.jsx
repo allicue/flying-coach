@@ -11,8 +11,9 @@ function Homepage(props) {
       <h1 className='homepage-title'>Flying Coach</h1>
       <h2>Economical attractions for your upcoming trip.</h2>
       <img className='homepage-cloud' src={Cloud} alt='cloud' />
-      <h2>VIEW DESTINATIONS</h2>
-      <img className='homepage-arrow' src={Arrow} alt='arrow' />
+        <h2>VIEW DESTINATIONS</h2>
+        <Link to='/destinations'><img className='homepage-arrow' src={Arrow} alt='arrow' /></Link>
+      
       </div>
       
     </div>

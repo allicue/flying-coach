@@ -28,7 +28,7 @@ function MainContainer(props) {
   const handleCreate = async (activityData) => {
     const newActivity = await postActivity(activityData)
     setActivities(prevState => [...prevState, newActivity])
-    history.push('/destinations/:id')
+    history.push('/destinations')
   }
 
   const handleUpdate = async (id, activityData) => {
@@ -36,7 +36,7 @@ function MainContainer(props) {
     setActivities(prevState => prevState.map(activity => {
       return activity.id === Number(id) ? updatedActivity : activity
     }))
-    history.push('/destinations/:id');
+    history.push('/destinations');
   }
 
   const handleDelete = async (id) => {
