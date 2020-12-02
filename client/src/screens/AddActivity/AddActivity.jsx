@@ -10,9 +10,12 @@ function AddActivity(props) {
     img_url: '',
     price: '',
     activity_url: '',
-    destination_id: destinationId
+    destination_id: destinationId,
+    // user_id: {`${props.currentUser}`}
+
   })
 
+  console.log(formData)
   
 
   // const { id } = useParams()

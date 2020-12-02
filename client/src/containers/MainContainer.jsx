@@ -55,7 +55,7 @@ function MainContainer(props) {
           <AllDestinations destinations={destinations}></AllDestinations>
         </Route>
         <Route path='/add-activity'>
-          <AddActivity handleCreate={handleCreate} destinations={destinations}></AddActivity>
+          <AddActivity handleCreate={handleCreate} destinations={destinations} currentUser={props.currentUser}></AddActivity>
         </Route>
         <Homepage ></Homepage>
         {/* <Route path='/foods/:id/edit'>
