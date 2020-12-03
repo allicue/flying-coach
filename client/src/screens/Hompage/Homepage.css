@@ -56,9 +56,6 @@
   font-weight:300;
   font-size:32px;
   overflow:hidden;
-  -webkit-backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  -webkit-transform: translate3d(0,0,0);
 }
 
 .animation {

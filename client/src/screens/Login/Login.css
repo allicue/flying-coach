@@ -75,3 +75,32 @@
 .login-link {
   color: #E63946;
 }
+
+/* TABLET BREAKPOINT */
+@media only screen and (max-width: 780px) {
+
+  .login-title {
+    font-size: 50px;
+  }
+
+  .login-input {
+    width: 350px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .login-submit-button {
+    width: 200px;
+    height: 200px;
+  }
+
+  .login-cloud {
+    width: 200px;
+  }
+
+  .login-button-text {
+    width: 90%;
+    font-size: 20px;
+  }
+
+}
