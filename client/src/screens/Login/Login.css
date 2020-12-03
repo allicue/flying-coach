@@ -12,7 +12,6 @@
   color: #A8DADC;
   font-size: 65px;
   padding: 0px;
-  /* text-shadow: 2px 2px 4px #000000; */
   margin-top: 80px;
   margin-bottom: 10px;
 }
@@ -38,7 +37,6 @@
   padding-left: 30px;
   font-size: 20px;
   outline-style: none;
-  /* background-color: #F1FAEE; */
   border: none;
   box-shadow: 2px 2px 4px 1px #999;
 }
