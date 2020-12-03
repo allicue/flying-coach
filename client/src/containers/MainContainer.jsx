@@ -3,7 +3,7 @@ import { Switch, Route, useHistory } from 'react-router-dom';
 import AllDestinations from '../screens/AllDestinations/AllDestinations';
 import DestinationDetails from '../screens/DestinationDetails/DestinationDetails';
 import { getAllDestinations } from '../services/destinations';
-import { postActivity, getAllActivities, getOneActivity, putActivity, destroyActivity } from '../services/activities';
+import { postActivity, getAllActivities, putActivity, destroyActivity } from '../services/activities';
 import Homepage from '../screens/Hompage/Homepage';
 import AddActivity from '../screens/AddActivity/AddActivity';
 import EditActivity from '../screens/EditActivity/EditActivity';

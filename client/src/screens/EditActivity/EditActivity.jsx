@@ -13,11 +13,8 @@ function EditActivity(props) {
     destination_id: destinationId,
   })
 
-  console.log(formData)
-
   const { id } = useParams();
 
-  console.log(id)
   useEffect(() => {
     const prefillForm = () => {
       const activityItem = props.activities.find(activity => activity.id === Number(id));
