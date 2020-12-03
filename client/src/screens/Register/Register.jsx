@@ -21,7 +21,7 @@ export default function Register(props) {
   return (
 
     <div className='login-screen'>
-      <h3 className='login-title'>REGISTER</h3>
+      <h3 className='register-title'>REGISTER</h3>
       <form className='form' onSubmit={(e) => {
         e.preventDefault();
         props.handleRegister(formData);
