@@ -170,3 +170,25 @@
   color: #E63946;
   font-weight: bold;
 }
+
+/* TABLET BREAKPOINT */
+@media only screen and (max-width: 979px) {
+  .activities-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .activity-container {
+    width: 400px;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 3px 1px #CECECE;
+  }
+
+  .activity-description {
+  font-size: 20px;
+  }
+}

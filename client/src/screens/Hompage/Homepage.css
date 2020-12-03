@@ -108,3 +108,8 @@
     80% {opacity:1;}
     100% {opacity:0;width:355px;}
 }
+
+/* TABLET BREAKPOINT */
+@media only screen and (max-width: 780px) {
+
+}
