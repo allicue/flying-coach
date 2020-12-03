@@ -53,7 +53,6 @@ function App() {
           <Route path='/'>
             <MainContainer currentUser={currentUser}></MainContainer>
           </Route>
-        
         </Switch>
       </Layout>
   );
