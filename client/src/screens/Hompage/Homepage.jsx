@@ -8,8 +8,14 @@ function Homepage(props) {
   return (
     <div className='homepage'>
       <div className='container'>
-      <h1 className='homepage-title'>Flying Coach</h1>
-      <h2>Economical attractions for your upcoming trip.</h2>
+        <h1 className='homepage-title'>Flying Coach</h1>
+
+          <div className='animation ani-title'>Economical attractions</div> 
+          <div className='animation'> 
+            <span className='animation'>for your upcoming trip.</span>
+          </div>
+        
+        <br></br>
       <img className='homepage-cloud' src={Cloud} alt='cloud' />
         <h2>VIEW DESTINATIONS</h2>
         <div className='button-background'>

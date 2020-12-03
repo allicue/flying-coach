@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Login.css'
+import './Login.css';
+import Cloud from '../../assets/icons/cloud.png';
 
 function Login(props) {
   const [formData, setFormData] = useState({
@@ -20,7 +21,7 @@ function Login(props) {
     <div>
       
       <div className='login-screen'>
-        <h3>LOG IN</h3>
+        <h3 className='login-title'>LOGIN</h3>
       
         <form className='form' onSubmit={(e) => {
           e.preventDefault()
@@ -44,8 +45,8 @@ function Login(props) {
             value={formData.password}
             onChange={handleChange}
             />
-          <button className='submit-button'>Submit</button>
-          <p>Don't have an account yet? <Link to="/register">Register here.</Link></p>
+          <button className='login-submit-button'><p className='login-button-text'>SUBMIT</p><img className="login-cloud" src={Cloud}/></button>
+          <p>Don't have an account yet? <Link className='login-link' to="/register">Register here.</Link></p>
           </form>
         </div>
     </div>
