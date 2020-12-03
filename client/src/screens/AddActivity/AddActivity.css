@@ -1,0 +1,25 @@
+.add-form {
+  display: flex;
+  flex-direction: column;
+  margin:0 auto;
+  justify-content: center;
+}
+.register-input {
+  margin-top: 20px;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 45px;
+  width: 500px;
+  height: 60px;
+  padding-left: 30px;
+  font-size: 20px;
+  outline-style: none;
+  border: none;
+  box-shadow: 2px 2px 4px 1px #999;
+  margin-bottom: 50px;
+}
+
+.dropdown-input {
+  width: 530px;
+  color: rgb(128, 128, 128);
+  padding-right: 10px;
+}
