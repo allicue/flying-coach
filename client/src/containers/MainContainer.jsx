@@ -3,7 +3,7 @@ import { Switch, Route, useHistory } from 'react-router-dom';
 import AllDestinations from '../screens/AllDestinations/AllDestinations';
 import DestinationDetails from '../screens/DestinationDetails/DestinationDetails';
 import { getAllDestinations } from '../services/destinations';
-import { postActivity, getAllActivities, putActivity, destroyActivity } from '../services/activities';
+import { postActivity, getAllActivities, putActivity } from '../services/activities';
 import Homepage from '../screens/Hompage/Homepage';
 import AddActivity from '../screens/AddActivity/AddActivity';
 import EditActivity from '../screens/EditActivity/EditActivity';
@@ -11,12 +11,14 @@ import EditActivity from '../screens/EditActivity/EditActivity';
 function MainContainer(props) {
   const [destinations, setDestinations] = useState([])
   const [activities, setActivities] = useState([])
+  const [queriedDestinations, setQueriedDestinations] = useState([])
   const history = useHistory()
   
   useEffect(() => {
     const fetchDestinations = async () => {
       const destinationData = await getAllDestinations()
       setDestinations(destinationData)
+      setQueriedDestinations(destinationData)
     }
     const fetchActivities = async () => {
       const activityData = await getAllActivities()
@@ -47,7 +49,7 @@ function MainContainer(props) {
           <DestinationDetails activities={activities} currentUser={props.currentUser} destinations={destinations} setActivities={setActivities}></DestinationDetails>
         </Route>
         <Route path='/destinations'>
-          <AllDestinations destinations={destinations}></AllDestinations>
+          <AllDestinations destinations={destinations} queriedDestinations={queriedDestinations} setQueriedDestinations={setQueriedDestinations}> </AllDestinations>
         </Route>
         <Route path='/add-activity'>
           <AddActivity handleCreate={handleCreate} destinations={destinations}></AddActivity>
