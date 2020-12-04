@@ -13,8 +13,9 @@ function Homepage(props) {
           <div className='animation ani-title'>Economical attractions</div> 
           <div className='animation'> 
             <span className='animation'>for your upcoming trip.</span>
-          </div>
+        </div>
         
+          <h3 className='tagline'>Economical attractions for your upcoming trip.</h3>
         <br></br>
       <img className='homepage-cloud' src={Cloud} alt='cloud' />
         <h2>VIEW DESTINATIONS</h2>

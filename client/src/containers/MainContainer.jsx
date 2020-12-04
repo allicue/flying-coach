@@ -13,7 +13,6 @@ function MainContainer(props) {
   const [activities, setActivities] = useState([])
   const history = useHistory()
   
-
   useEffect(() => {
     const fetchDestinations = async () => {
       const destinationData = await getAllDestinations()
@@ -40,13 +39,6 @@ function MainContainer(props) {
     }))
     history.push('/destinations');
   }
-
-  // const handleDelete = async (id) => {
-  //   await destroyActivity(id)
-  //   setActivities(prevState => prevState.filter(activity => activity.id !== id))
-  // }
-
-  // handleDelete={handleDelete} 
 
   return (
     <div>

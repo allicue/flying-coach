@@ -49,6 +49,10 @@
   height: 75px;
 }
 
+.tagline {
+  display: none;
+}
+
 /* ANIMATION CSS */
 .animation {
   font-weight:300;
@@ -109,6 +113,14 @@
   
   .animation{
     display: none;
+  }
+
+  .tagline {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 75px;
+    font-size: 20px;
   }
 
   .homepage-title {

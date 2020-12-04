@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import './DestinationDetails.css'
 import { getOneDestination } from '../../services/destinations';
+import { destroyActivity } from '../../services/activities';
 import AddIcon from '../../assets/icons/add.png';
 import Pencil from '../../assets/icons/pencil.png';
 import Trash from '../../assets/icons/trash.png'
-import { destroyActivity } from '../../services/activities';
+
 
 
 function DestinationDetails(props) {
