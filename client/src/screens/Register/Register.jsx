@@ -36,7 +36,7 @@ export default function Register(props) {
           value={formData.username}
           onChange={handleChange}
           />
-        <br />
+
         <label className='form-label'>Email:</label>
         <input
           className='login-input register-input'
@@ -46,7 +46,7 @@ export default function Register(props) {
           value={formData.email}
           onChange={handleChange}
           />
-        <br />
+
         <label className='form-label'>Password:</label>
         <input
           className='login-input register-input'
@@ -56,8 +56,8 @@ export default function Register(props) {
           value={formData.password}
           onChange={handleChange}
           />
-        <br />
-        <button className='login-submit-button'><p className='login-button-text'>SUBMIT</p><img className="login-cloud" src={Cloud}/></button>
+
+        <button className='login-submit-button'><p className='login-button-text'>SUBMIT</p><img className="login-cloud" alt='cloud' src={Cloud}/></button>
         <p>Already have an account? <Link className='login-link' to="/login">Login here.</Link></p>
         </form>
       </div>
