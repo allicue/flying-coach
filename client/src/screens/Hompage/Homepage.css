@@ -24,7 +24,6 @@
 }
 
 .homepage-cloud {
-
   margin: 0 auto;
   margin-top: 10px;
   width: 100px;
@@ -51,7 +50,6 @@
 }
 
 /* ANIMATION CSS */
-
 .animation {
   font-weight:300;
   font-size:32px;
@@ -106,7 +104,24 @@
     100% {opacity:0;width:355px;}
 }
 
-/* TABLET BREAKPOINT */
-@media only screen and (max-width: 780px) {
+/* MOBILE BREAKPOINT */
+@media only screen and (max-width: 500px) {
+  
+  .animation{
+    display: none;
+  }
+
+  .homepage-title {
+    display: none;
+  }
+
+  .homepage-arrow {
+    width: 55px;
+    height: 55px;
+  }
+
+  .homepage-cloud {
+    display: none;
+  }  
 
 }

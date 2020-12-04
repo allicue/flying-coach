@@ -5,21 +5,28 @@ import { getOneDestination } from '../../services/destinations';
 import AddIcon from '../../assets/icons/add.png';
 import Pencil from '../../assets/icons/pencil.png';
 import Trash from '../../assets/icons/trash.png'
-
+import { destroyActivity } from '../../services/activities';
 
 
 function DestinationDetails(props) {
   const [destination, setDestination] = useState([])
+  const [isLoaded, setIsLoaded] = useState(false)
 
   const { id } = useParams()
 
+  const handleDelete = async (id) => {
+  await destroyActivity(id)
+    props.setActivities(prevState => prevState.filter(activity => activity.id !== id))
+    setIsLoaded(!isLoaded)
+  }
+
   useEffect(() => {
     const fetchDestinations = async () => {
-      const destinationData = await getOneDestination(id)
-      setDestination(destinationData)
-    }
-    fetchDestinations()
-  }, [id])
+    const destinationData = await getOneDestination(id)
+    setDestination(destinationData)
+  }
+  fetchDestinations()
+  }, [id, isLoaded])
 
   return (
     <div className='destination-detail-page'>
@@ -29,10 +36,10 @@ function DestinationDetails(props) {
       </div>
 
       <div className='country-about-container'>
-        <section className='column'>
+        <section className='column column-a'>
           <img className='about-img' alt='country' src={destination.about_img}/>
         </section>
-        <section className='column'>
+        <section className='column column-b'>
           <h3 className='about-section-text'>ABOUT {destination.country_name}</h3>
           <p className='about-text'>{destination.description}</p>
         </section>
@@ -65,7 +72,7 @@ function DestinationDetails(props) {
                         <>
                         <div className='button-container'>
                           <Link to={`/activities/${activity.id}`}><button className='button-crud'><img src={Pencil} alt='pencil' className='button-icon'/></button></Link>
-                          <button className='button-crud' onClick={() => props.handleDelete(activity.id)}><img src={Trash} alt='trash' className='button-icon'/></button>
+                          <button className='button-crud' onClick={() => handleDelete(activity.id)}><img src={Trash} alt='trash' className='button-icon'/></button>
                         </div>
                         </>
                       }

@@ -12,6 +12,7 @@ function MainContainer(props) {
   const [destinations, setDestinations] = useState([])
   const [activities, setActivities] = useState([])
   const history = useHistory()
+  
 
   useEffect(() => {
     const fetchDestinations = async () => {
@@ -40,18 +41,18 @@ function MainContainer(props) {
     history.push('/destinations');
   }
 
-  const handleDelete = async (id) => {
-    await destroyActivity(id)
-    setActivities(prevState => prevState.filter(activity => activity.id !== id))
-    window.location.reload()
-  }
+  // const handleDelete = async (id) => {
+  //   await destroyActivity(id)
+  //   setActivities(prevState => prevState.filter(activity => activity.id !== id))
+  // }
+
+  // handleDelete={handleDelete} 
 
   return (
     <div>
       <Switch>
-        
         <Route path='/destinations/:id'>
-          <DestinationDetails activities={activities} handleDelete={handleDelete} currentUser={props.currentUser} destinations={destinations}></DestinationDetails>
+          <DestinationDetails activities={activities} currentUser={props.currentUser} destinations={destinations} setActivities={setActivities}></DestinationDetails>
         </Route>
         <Route path='/destinations'>
           <AllDestinations destinations={destinations}></AllDestinations>
@@ -62,7 +63,7 @@ function MainContainer(props) {
         <Route path='/activities/:id'>
           <EditActivity  handleUpdate={handleUpdate} activities={activities} destinations={destinations}></EditActivity>
         </Route>
-        <Homepage ></Homepage>
+        <Homepage></Homepage>
       </Switch>
     </div>
   );

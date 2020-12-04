@@ -23,3 +23,36 @@
   color: rgb(128, 128, 128);
   padding-right: 10px;
 }
+
+/* TABLET BREAKPOINT */
+@media only screen and (max-width: 780px) {
+
+  .login-title {
+    font-size: 50px;
+  }
+
+  .register-input {
+    width: 350px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .login-submit-button {
+    width: 200px;
+    height: 200px;
+  }
+
+  .login-cloud {
+    width: 200px;
+  }
+
+  .login-button-text {
+    width: 90%;
+    font-size: 20px;
+  }
+
+  .dropdown-input {
+    width: 383px;
+  }
+
+}
