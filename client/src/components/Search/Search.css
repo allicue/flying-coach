@@ -1,0 +1,18 @@
+.search-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input {
+  font-family: 'Open Sans', sans-serif;
+  width: 50vw;
+  font-size: 18px;
+  letter-spacing: 0.1px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  border-radius: 45px;
+  margin: 40px 40px 00px 40px;
+  outline: none;
+}

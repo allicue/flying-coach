@@ -88,7 +88,7 @@ function AddActivity(props) {
             <option value={country.id} key={country.id}>{country.country_name}</option>
           ))}
         </select>
-        <button className='login-submit-button'><p className='login-button-text'>SUBMIT</p><img className="login-cloud" src={Cloud}/></button>
+        <button className='login-submit-button'><p className='login-button-text'>SUBMIT</p><img className="login-cloud" alt='cloud' src={Cloud}/></button>
       </form>
     </div>
   );

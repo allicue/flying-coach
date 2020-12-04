@@ -45,7 +45,7 @@ function Login(props) {
             value={formData.password}
             onChange={handleChange}
             />
-          <button className='login-submit-button'><p className='login-button-text'>SUBMIT</p><img className="login-cloud" src={Cloud}/></button>
+          <button className='login-submit-button'><p className='login-button-text'>SUBMIT</p><img className="login-cloud" alt='cloud' src={Cloud}/></button>
           <p>Don't have an account yet? <Link className='login-link' to="/register">Register here.</Link></p>
           </form>
         </div>
