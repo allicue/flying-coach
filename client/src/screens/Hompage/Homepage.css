@@ -1,0 +1,139 @@
+.homepage {
+  display: flex;
+  text-align: center;
+  height: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url('../../assets/images/anotherbackgroundimg.jpg');
+  background-size: cover;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: 2px 2px #1D3557;
+}
+
+.container {
+  height: 100%;
+  min-height: 100vh;
+}
+
+.homepage-title {
+  font-family: 'Yellowtail', cursive;  
+  font-size: 150px;
+  margin-bottom: 40px;
+}
+
+.homepage-cloud {
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.button-background {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.button-background:hover {
+  background-image: linear-gradient(rgb(29,53,87, 0.5),rgb(29,53,87, 0.5));
+}
+
+.homepage-arrow {
+  width: 75px;
+  height: 75px;
+}
+
+.tagline {
+  display: none;
+}
+
+/* ANIMATION CSS */
+.animation {
+  font-weight:300;
+  font-size:32px;
+  overflow:hidden;
+}
+
+.animation {
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+  height: 50px;
+}
+
+.ani-title {
+  padding-right: 8px;
+}
+
+.animation:first-of-type { 
+  animation: showup 10s infinite;
+}
+
+.animation:last-of-type {
+  width:0px;
+  animation: reveal 10s infinite;
+
+}
+
+.animation:last-of-type span {
+  margin-left:-355px;
+  animation: slidein 10s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
+}
+
+/* MOBILE BREAKPOINT */
+@media only screen and (max-width: 500px) {
+  
+  .animation{
+    display: none;
+  }
+
+  .tagline {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 75px;
+    font-size: 20px;
+  }
+
+  .homepage-title {
+    display: none;
+  }
+
+  .homepage-arrow {
+    width: 55px;
+    height: 55px;
+  }
+
+  .homepage-cloud {
+    display: none;
+  }  
+
+}
