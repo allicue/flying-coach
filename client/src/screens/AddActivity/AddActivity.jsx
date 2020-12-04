@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Cloud from '../../assets/icons/cloud.png';
+import './AddActivity.css'
 
 function AddActivity(props) {
   const [destinationId, setDestinationId] = useState(0)
@@ -29,14 +31,15 @@ function AddActivity(props) {
   }
 
   return (
-    <div>
-      <h3>Add an Activity</h3>
-      <form onSubmit={(e) => {
+    <div className='login-screen'>
+      <h3 className='login-title'>ADD AN ACTIVITY</h3>
+      <form className='add-form' onSubmit={(e) => {
         e.preventDefault()
         props.handleCreate(formData)
       }}>
         <label htmlFor="name" className='form-label'>Name:</label>
         <input
+          className='register-input'
           type='text'
           name="name"
           placeholder='Activity Name'
@@ -45,6 +48,7 @@ function AddActivity(props) {
         />
         <label htmlFor="description" className='form-label'>Description:</label>
         <input
+          className='register-input'
           type='text'
           name="description"
           placeholder='Activity Description'
@@ -53,6 +57,7 @@ function AddActivity(props) {
         />
         <label htmlFor="img_url" className='form-label'>Image:</label>
         <input
+          className='register-input'
           type='url'
           name="img_url"
           placeholder='Activity Image (Enter URL for Image)'
@@ -61,6 +66,7 @@ function AddActivity(props) {
         />
         <label htmlFor="price" className='form-label'>Price:</label>
         <input
+          className='register-input'
           type='number'
           name="price"
           placeholder='Activity Price'
@@ -69,19 +75,20 @@ function AddActivity(props) {
         />
         <label htmlFor="activity_url" className='form-label'>Link to Activity:</label>
         <input
+          className='register-input'
           type='url'
           name="activity_url"
           placeholder='Link to Activity Website'
           value={formData.activity_url}
           onChange={handleChange}
         />
-         <select defaultValue='default' onChange={handleDropDownChange}>
-          <option disabled value='default'>-- Select a Country --</option>
+         <select className='register-input dropdown-input' defaultValue='default' onChange={handleDropDownChange}>
+          <option disabled value='default'>Select a Country</option>
           {props.destinations.map(country => (
             <option value={country.id} key={country.id}>{country.country_name}</option>
           ))}
         </select>
-        <button>Submit</button>
+        <button className='login-submit-button'><p className='login-button-text'>SUBMIT</p><img className="login-cloud" src={Cloud}/></button>
       </form>
     </div>
   );

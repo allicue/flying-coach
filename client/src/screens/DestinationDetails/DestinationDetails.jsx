@@ -2,90 +2,97 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import './DestinationDetails.css'
 import { getOneDestination } from '../../services/destinations';
-// import { getAllActivities } from '../services/activities';
+import { destroyActivity } from '../../services/activities';
+import AddIcon from '../../assets/icons/add.png';
+import Pencil from '../../assets/icons/pencil.png';
+import Trash from '../../assets/icons/trash.png'
+
+
 
 function DestinationDetails(props) {
   const [destination, setDestination] = useState([])
-  // const [activities, setActivities] = useState([])
+  const [isLoaded, setIsLoaded] = useState(false)
 
   const { id } = useParams()
 
+  const handleDelete = async (id) => {
+  await destroyActivity(id)
+    props.setActivities(prevState => prevState.filter(activity => activity.id !== id))
+    setIsLoaded(!isLoaded)
+  }
+
   useEffect(() => {
     const fetchDestinations = async () => {
-      const destinationData = await getOneDestination(id)
-      console.log(destinationData)
-      setDestination(destinationData)
-    }
-    // const fetchActivities = async () => {
-    //   const activityData = await getAllActivities()
-    //   setActivities(activityData)
-    // }
-    fetchDestinations()
-    // fetchActivities()
-  }, [id])
+    const destinationData = await getOneDestination(id)
+    setDestination(destinationData)
+  }
+  fetchDestinations()
+  }, [id, isLoaded])
 
   return (
     <div className='destination-detail-page'>
 
-      
       <div className='hero-img' style={{ backgroundImage: `url(${destination.hero_img})` }}>
         <h2 className='country-title'>{destination.country_name}</h2>
       </div>
 
       <div className='country-about-container'>
-        <section className='column'>
-          <img className='about-img' src={destination.about_img}/>
+        <section className='column column-a'>
+          <img className='about-img' alt='country' src={destination.about_img}/>
         </section>
-        <section className='column'>
+        <section className='column column-b'>
           <h3 className='about-section-text'>ABOUT {destination.country_name}</h3>
           <p className='about-text'>{destination.description}</p>
         </section>
       </div>
 
+      <div className='complete-activities-container'>
+      <div>
       <div className='activities-title-container'>
-        <h3>ACTIVITIES</h3>
+        <h3 className='activities-section-title'>ACTIVITIES</h3>
         {
         props.currentUser ?
           <>
-          <Link to='/add-activity'><h3>ADD ACTIVITY</h3></Link>
+              <Link className='add-activity-link' to='/add-activity'><img className='add-icon' alt='plus-sign' src={AddIcon}/><h3>ADD ACTIVITY</h3></Link>
           </>
           :
           <></>
       }
-      
       </div>
       
-      <div className='activities-container'>
-
-        {
-          destination.activities && (          
-            destination.activities.map(activity => (
-              <React.Fragment key={activity.id}>
-                <div className='activity-container'>
-                  <div className='activity-images' style={{ backgroundImage: `url(${activity.img_url})` }}>
-                  {
-                    activity.user_id === props.currentUser?.id &&
-                    <>
-                    <div>
-                      <Link to={`/activities/${activity.id}`}><button>EDIT</button></Link>
-                      <button onClick={() => props.handleDelete(activity.id)}>Delete</button>
+        <div className='activities-container'>
+          {
+            destination.activities && (          
+              destination.activities.map(activity => (
+                <React.Fragment key={activity.id}>
+                  <div className='activity-container'>
+                    <div className='activity-images' style={{ backgroundImage: `url(${activity.img_url})` }}>
+                      <div className='activity-image-layer'>
+                      {
+                        activity.user_id === props.currentUser?.id &&
+                        <>
+                        <div className='button-container'>
+                          <Link to={`/activities/${activity.id}`}><button className='button-crud'><img src={Pencil} alt='pencil' className='button-icon'/></button></Link>
+                          <button className='button-crud' onClick={() => handleDelete(activity.id)}><img src={Trash} alt='trash' className='button-icon'/></button>
+                        </div>
+                        </>
+                      }
+                        <p className='activity-title'>{activity.name}</p>
+                      </div>
                     </div>
-                    </>
-                  }
-                    <p className='activity-title'>{activity.name}</p>
+                    <p className='activity-description'>{activity.description}</p>
+                    <div className='activity-footer'>
+                      <p className='price'>${parseInt(activity.price)}</p>
+                      <a className='activity-link' rel="noreferrer" target="_blank" href={activity.activity_url}>See more >></a>
+                    </div>
                   </div>
-                  <p className='activity-description'>{activity.description}</p>
-                  <div className='activity-footer'>
-                    <p>${parseInt(activity.price)}</p>
-                    <a rel="noreferrer" target="_blank" href={activity.activity_url}>See more</a>
-                  </div>
-                </div>
-              </React.Fragment>
-            ))
-          )
-        }
-      </div>
-      
+                </React.Fragment>
+              ))
+            )
+          }
+        </div>
+        </div>
+        </div>
     </div>
   );
 }

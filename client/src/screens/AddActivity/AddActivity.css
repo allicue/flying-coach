@@ -1,0 +1,93 @@
+.add-form {
+  display: flex;
+  flex-direction: column;
+  margin:0 auto;
+  justify-content: center;
+}
+
+.register-input {
+  margin-top: 20px;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 45px;
+  width: 500px;
+  height: 60px;
+  padding-left: 30px;
+  font-size: 20px;
+  outline-style: none;
+  border: none;
+  box-shadow: 2px 2px 4px 1px #999;
+  margin-bottom: 50px;
+}
+
+.dropdown-input {
+  width: 530px;
+  color: rgb(128, 128, 128);
+  padding-right: 10px;
+}
+
+/* TABLET BREAKPOINT */
+@media only screen and (max-width: 780px) {
+
+  .login-title {
+    font-size: 50px;
+  }
+
+  .register-input {
+    width: 350px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .login-submit-button {
+    width: 200px;
+    height: 200px;
+  }
+
+  .login-cloud {
+    width: 200px;
+  }
+
+  .login-button-text {
+    width: 90%;
+    font-size: 20px;
+  }
+
+  .dropdown-input {
+    width: 383px;
+  }
+
+}
+
+/* MOBILE BREAKPOINT */
+@media only screen and (max-width: 500px) {
+
+
+  .login-title {
+    font-size: 40px;
+  }
+
+  .login-input {
+    width: 300px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .login-submit-button {
+    width: 150px;
+    height: 150px;
+  }
+
+  .login-cloud {
+    width: 200px;
+  }
+
+  .register-input {
+    width: 90%;
+    font-size: 15px;
+  }
+
+  .dropdown-input {
+    width: 300px;
+  }
+
+}

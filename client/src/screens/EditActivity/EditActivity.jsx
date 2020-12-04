@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Cloud from '../../assets/icons/cloud.png';
 
 function EditActivity(props) {
   const [destinationId, setDestinationId] = useState(0)
@@ -13,11 +14,8 @@ function EditActivity(props) {
     destination_id: destinationId,
   })
 
-  console.log(formData)
-
   const { id } = useParams();
 
-  console.log(id)
   useEffect(() => {
     const prefillForm = () => {
       const activityItem = props.activities.find(activity => activity.id === Number(id));
@@ -54,14 +52,15 @@ function EditActivity(props) {
   }
 
   return (
-    <div>
-      <h3>Edit an Activity</h3>
-      <form onSubmit={(e) => {
+    <div className='login-screen'>
+      <h3 className='login-title'>EDIT AN ACTIVITY</h3>
+      <form className='add-form' onSubmit={(e) => {
         e.preventDefault()
         props.handleUpdate(id, formData)
       }}>
         <label htmlFor="name" className='form-label'>Name:</label>
         <input
+          className='register-input'
           type='text'
           name="name"
           placeholder='Activity Name'
@@ -70,6 +69,7 @@ function EditActivity(props) {
         />
         <label htmlFor="description" className='form-label'>Description:</label>
         <input
+          className='register-input'
           type='text'
           name="description"
           placeholder='Activity Description'
@@ -78,6 +78,7 @@ function EditActivity(props) {
         />
         <label htmlFor="img_url" className='form-label'>Image:</label>
         <input
+          className='register-input'
           type='url'
           name="img_url"
           placeholder='Activity Image (Enter URL for Image)'
@@ -86,6 +87,7 @@ function EditActivity(props) {
         />
         <label htmlFor="price" className='form-label'>Price:</label>
         <input
+          className='register-input'
           type='number'
           name="price"
           placeholder='Activity Price'
@@ -94,19 +96,20 @@ function EditActivity(props) {
         />
         <label htmlFor="activity_url" className='form-label'>Link to Activity:</label>
         <input
+          className='register-input'
           type='url'
           name="activity_url"
           placeholder='Link to Activity Website'
           value={formData.activity_url}
           onChange={handleChange}
         />
-         <select defaultValue='default' onChange={handleDropDownChange}>
+         <select className='register-input dropdown-input' defaultValue='default' onChange={handleDropDownChange}>
           <option disabled value='default'>-- Select a Country --</option>
           {props.destinations.map(country => (
             <option value={country.id} key={country.id}>{country.country_name}</option>
           ))}
         </select>
-        <button>Submit</button>
+        <button className='login-submit-button'><p className='login-button-text'>SUBMIT</p><img className="login-cloud" src={Cloud}/></button>
       </form>
     </div>
   );

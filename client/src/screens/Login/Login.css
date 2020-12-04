@@ -5,6 +5,15 @@
  flex-direction: column;
  margin:0 auto;
  text-align: center;
+ font-family: 'Open Sans', sans-serif;
+}
+
+.login-title {
+  color: #A8DADC;
+  font-size: 65px;
+  padding: 0px;
+  margin-top: 80px;
+  margin-bottom: 10px;
 }
 
 .form {
@@ -20,14 +29,107 @@
 }
 
 .login-input {
+  font-family: 'Open Sans', sans-serif;
   border-radius: 45px;
   width: 500px;
   height: 60px;
   margin-bottom: 30px;
   padding-left: 30px;
   font-size: 20px;
+  outline-style: none;
+  border: none;
+  box-shadow: 2px 2px 4px 1px #999;
 }
 
-.submit-button {
-  width: 500px;
+.login-submit-button {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
 }
+
+.login-cloud {
+  position: relative;
+  width: 225px;
+}
+
+.login-button-text {
+  width: 85%;
+  position: absolute;
+  z-index: 200;
+  font-size: 25px;
+  font-weight: bold;
+  color: #F1FAEE;
+  padding-top: 20px;
+  padding-right: 50px;
+}
+
+.login-submit-button:hover {
+  cursor: pointer;
+}
+
+.login-link {
+  color: #E63946;
+}
+
+/* TABLET BREAKPOINT */
+@media only screen and (max-width: 780px) {
+
+  .login-title {
+    font-size: 50px;
+  }
+
+  .login-input {
+    width: 350px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .login-submit-button {
+    width: 200px;
+    height: 200px;
+  }
+
+  .login-cloud {
+    width: 200px;
+  }
+
+  .login-button-text {
+    width: 90%;
+    font-size: 20px;
+  }
+
+}
+
+/* MOBILE BREAKPOINT */
+/* @media only screen and (max-width: 500px) {
+
+  .login-title {
+    font-size: 50px;
+  }
+
+  .login-input {
+    width: 300px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .login-submit-button {
+    width: 150px;
+    height: 150px;
+  }
+
+  .login-cloud {
+    width: 200px;
+  }
+
+  .login-button-text {
+    width: 90%;
+    font-size: 20px;
+  }
+
+} */

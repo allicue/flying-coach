@@ -1,25 +1,64 @@
 .all-destinations {
   text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.destinations-hero-img {
+  background-image: url('../../assets/images/backgroundimg2.jpg');
+  background-position-y: 40%;
 }
 
 .destinations-container{
+  width: 90%;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-flow: wrap;
-  width: 100%;
+  margin-top: 75px;
 }
 
 .thumbnail-images {
-  width: 300px;
-  height: 300px;
+  width: 425px;
+  height: 425px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-size: cover;
+  margin: 20px 40px 20px 40px;
 }
 
 .thumbnail-text {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: bold;
+  text-shadow: 2px 2px #1D3557;
+  text-transform: uppercase;
+}
+
+.thumbnail-text-link {
+  text-decoration: none;
+
+  color: #F1FAEE;
+}
+
+/* MOBILE BREAKPOINT */
+@media only screen and (max-width: 500px) {
+
+  .destinations-container{
+    width: 100%;
+    margin: 0 auto;
+    }
+
+  .thumbnail-images {
+    width: 300px;
+    height: 300px;
+    margin: 0px;
+    margin-top: 25px;
+    }
+
+    .thumbnail-text {
+      font-size: 35px;
+    }
 }

@@ -9,11 +9,13 @@
   align-items: center;
   background-size: cover;
 }
+
 .country-title {
   color: #F1FAEE;
   font-size: 150px;
   font-family: 'Yellowtail', cursive;
   text-shadow: 2px 2px #000000c0;
+  text-align: center;
 }
 
 .country-about-container {
@@ -34,11 +36,17 @@
 .about-section-text {
   margin-top: 0px;
   text-transform: uppercase;
+  font-size: 30px;
 }
 
 .about-text {
   text-align: justify;
   line-height: 30px;
+}
+
+.complete-activities-container {
+  width: 100%;
+  background-color: #eeeeee;
 }
 
 .activities-title-container {
@@ -47,6 +55,28 @@
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
+}
+
+.activities-section-title {
+  font-size: 30px;
+}
+
+.add-activity-link {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: #000000c0;
+  text-decoration: none;
+}
+
+.add-activity-link:hover {
+  text-decoration: underline;
+}
+
+.add-icon {
+  width: 30px;
+  height: 30px;
+  padding-right: 10px;
 }
 
 .activities-container {
@@ -60,34 +90,185 @@
 
 .activity-container {
   width: 400px;
-  margin-left: 20px;
-  border: 1px solid black;
+  margin: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 3px 1px #CECECE;
 }
 
 .activity-images {
   height: 125px;
+  background-size: cover;
+}
+
+.activity-image-layer {
+  height: 125px;
+  width: 400px;
+  background-image: linear-gradient(rgb(0,0,0, 0.3),rgb(0,0,0, 0.3));
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-size: cover;
+  position: relative;
 }
 
 .activity-title {
   color: white;
+  font-size: 25px;
   font-weight: bold;
+  text-shadow: 2px 2px 4px #000000;
+  text-align: center;
+  width: 90%;
+}
+
+.button-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 15px 0px 0px;
+  position: absolute;
+  align-items: baseline;
+}
+
+.button-crud {
+  background-color: transparent;
+  border: none;
+}
+
+.button-crud:hover {
+  cursor: pointer;
+  background-image: linear-gradient(rgb(0,0,0, 0.3),rgb(0,0,0, 0.3));
+}
+
+.button-icon {
+  width: 25px;
+  height: 25px;
 }
 
 .activity-description {
   height: 250px;
-  padding: 0px 4px 0px 4px;
+  padding: 0px 15px 0px 15px;
+  font-weight: 500;
   line-height: 27px;
   text-align: justify;
   overflow: auto;
+  color: #1D3557;
 }
 
 .activity-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 4px 0px 4px;
+  padding: 0px 15px 0px 15px;
+}
+
+.price {
+  color: #1D3557;
+  font-weight: bold;
+}
+
+.activity-link {
+  color: #E63946;
+  font-weight: bold;
+}
+
+/* TABLET BREAKPOINTs */
+@media only screen and (max-width: 979px) {
+  .activities-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .activity-container {
+    width: 400px;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 3px 1px #CECECE;
+  }
+
+  .activity-description {
+  font-size: 20px;
+  }
+}
+
+/* MOBILE BREAKPOINT */
+@media only screen and (max-width: 500px) {
+
+  .country-title {
+    font-size: 70px;
+  }
+
+  .column-a {
+    display: none;
+  }
+
+  .column-b {
+    width: 100%;
+  }
+
+  .about-section-text {
+    text-align: center;
+  }
+
+  .activities-title-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .activities-section-title {
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .button-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .add-activity-link {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .activity-container {
+    width: 350px;
+    margin: 0px;
+    margin-bottom: 10px;
+  }
+
+  .activity-images {
+    height: 150px;
+  }
+
+  .activity-image-layer {
+    height: 150px;
+    width: 350px;
+  }
+
+
+}
+
+/* MOBILE BREAKPOINT */
+@media only screen and (max-width: 360px) {
+
+  .activities-title-container {
+    width: 90%;
+  }
+
+  .activity-container {
+    width: 95%;
+  }
+
+  .activity-image-layer {
+    width: 100%;
+  }
+
+
 }

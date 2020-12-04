@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Cloud from '../../assets/icons/cloud.png';
+import './Register.css'
 
 export default function Register(props) {
   const [formData, setFormData] = useState({
@@ -17,40 +19,47 @@ export default function Register(props) {
   }
 
   return (
-    <form onSubmit={(e) => {
-      e.preventDefault();
-      props.handleRegister(formData);
-    }}>
-      <h3>REGISTER</h3>
-      <label className='form-label'>Username:</label>
+
+    <div className='login-screen'>
+      <h3 className='register-title'>REGISTER</h3>
+      <form className='form' onSubmit={(e) => {
+        e.preventDefault();
+        props.handleRegister(formData);
+      }}>
+ 
+        <label className='form-label'>Username:</label>
         <input
+          className='login-input register-input'
           type='text'
           name='username'
           placeholder='Username'
           value={formData.username}
           onChange={handleChange}
-        />
-      <br />
-      <label className='form-label'>Email:</label>
+          />
+        <br />
+        <label className='form-label'>Email:</label>
         <input
+          className='login-input register-input'
           type='text'
           name='email'
           placeholder='Email'
           value={formData.email}
           onChange={handleChange}
-        />
-      <br />
-      <label className='form-label'>Password:</label>
+          />
+        <br />
+        <label className='form-label'>Password:</label>
         <input
+          className='login-input register-input'
           type='password'
           name='password'
           placeholder='Password'
           value={formData.password}
           onChange={handleChange}
-        />
-      <br />
-      <button>Submit</button>
-      <p>Already have an account? <Link to="/login">Login here.</Link></p>
-    </form>
+          />
+        <br />
+        <button className='login-submit-button'><p className='login-button-text'>SUBMIT</p><img className="login-cloud" src={Cloud}/></button>
+        <p>Already have an account? <Link className='login-link' to="/login">Login here.</Link></p>
+        </form>
+      </div>
   )
 }
