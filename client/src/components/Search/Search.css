@@ -16,3 +16,10 @@
   margin: 40px 40px 00px 40px;
   outline: none;
 }
+
+/* MOBILE BREAKPOINT */
+@media only screen and (max-width: 500px) {
+  .search-input {
+    font-size: 15px;
+  }
+}

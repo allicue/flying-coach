@@ -84,6 +84,7 @@
   .register-input {
     width: 90%;
     font-size: 15px;
+    border: 1px solid #ddd;
   }
 
   .dropdown-input {

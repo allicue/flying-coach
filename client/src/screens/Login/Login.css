@@ -87,6 +87,7 @@
     width: 350px;
     height: 45px;
     font-size: 18px;
+    border: 1px solid #ddd;
   }
 
   .login-submit-button {

@@ -110,17 +110,17 @@
 
 /* MOBILE BREAKPOINT */
 @media only screen and (max-width: 500px) {
-  
+
   .animation{
     display: none;
   }
 
   .tagline {
-    margin-top: 25px;
+    margin: 45px 20px 25px 20px;
     display: flex;
     justify-content: center;
     margin-bottom: 75px;
-    font-size: 20px;
+    font-size: 30px;
   }
 
   .homepage-title {
@@ -136,4 +136,10 @@
     display: none;
   }  
 
+  .homepage-text {
+  font-size: 25px;
+  font-weight: bold;
+  }
+
 }
+

@@ -52,7 +52,7 @@ export default function Register(props) {
           className='login-input register-input'
           type='password'
           name='password'
-          placeholder='Password'
+          placeholder='Password (must be at least 6 characters long)'
           value={formData.password}
           onChange={handleChange}
           />
