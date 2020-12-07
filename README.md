@@ -1,5 +1,7 @@
 # Flying Coach
 
+https://flying-coach.netlify.app/
+
 ## Overview
 
 **Flying Coach** is a travel guide for users visiting places abroad with low cost activities available at their destination. Users can add activities under each available destination as well as edit or delete their contributed activity.
@@ -132,23 +134,24 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Create Migration Tables/Models    |    H     |     2 hrs      |     TBD     |    TBD   |
-| Create Seed Data    |   M     |    2 hrs      |     TBD     |    TBD   |
-| Create Controller Methods/Routes |    H     |     3 hrs      |     TBD     |     TBD     |
-| Create Authentification Methods/Routes |    H     |     2 hrs      |     TBD     |     TBD     |
-| Test/Debug Routes |    M     |     1 hr      |     TBD     |     TBD     |
-| Connect Backend to Frontend |    M     |     .5 hrs      |     TBD     |     TBD     |
-| Build out React File Structure |    L     |     1 hr      |     TBD     |     TBD     |
-| Create Methods/Build out Services Folder  |    H     |     2.5 hrs      |     TBD     |     TBD     |
-| Build out User Authentification Screens |    M     |     2 hrs      |     TBD     |     TBD     |
-| Build out User Authentification Logic |    M     |     3 hrs      |     TBD     |     TBD     |
-| Render all Destinations  |    M     |     2 hrs      |     TBD     |     TBD     |
-| Render Specific Destination Details/Activities    |    H     |     4 hrs      |     TBD     |    TBD   |
-| Build out CRUD Functionality/Screens for Activities   |    H     |     6 hrs      |     TBD     |    TBD   |
-| CSS Styling    |    M     |     6 hrs      |     TBD     |    TBD   |
-| Create Mobile/Tablet Media Query    |    H     |     3 hrs      |     TBD     |    TBD   |
-| Deployment    |    H     |     1 hr      |     TBD     |    TBD   |
-| TOTAL               |          |     41 hrs      |     TBD     |     TBD     |
+| Create Migration Tables/Models    |    H     |     2 hrs      |     1hr     |    1hr   |
+| Create Seed Data    |   M     |    2 hrs      |     1 hr     |    1 hr   |
+| Create Controller Methods/Routes |    H     |     3 hrs      |     3 hrs    |     3 hrs    |
+| Create Authentification Methods/Routes |    H     |     2 hrs      |     1 hr     |     1 hr     |
+| Test/Debug Routes |    M     |     1 hr      |     1.5 hrs     |     1.5 hrs     |
+| Connect Backend to Frontend |    M     |     .5 hrs      |     .5 hrs     |     .5 hrs     |
+| Build out React File Structure |    L     |     1 hr      |     .5 hrs     |     .5 hrs     |
+| Create Methods/Build out Services Folder  |    H     |     2.5 hrs      |     1 hr     |     1 hr     |
+| Build out User Authentification Screens |    M     |     2 hrs      |     1.5 hrs     |     1.5 hrs     |
+| Build out User Authentification Logic |    M     |     3 hrs      |     1.5 hrs     |     1.5 hrs     |
+| Render all Destinations  |    M     |     2 hrs      |     1.5 hrs     |     1.5 hrs     |
+| Render Specific Destination Details/Activities    |    H     |     4 hrs      |     3 hrs     |    3 hrs   |
+| Build out CRUD Functionality/Screens for Activities   |    H     |     6 hrs      |     5 hrs     |    5 hrs   |
+| CSS Styling    |    M     |     6 hrs      |     6 hrs     |    6 hrs   |
+| Create Mobile/Tablet Media Query    |    H     |     3 hrs      |     2.5 hrs     |    2.5 hrs   |
+| Deployment    |    H     |     1 hr      |     .5 hrs     |    .5 hrs   |
+| Post-MVP (search functionality)    |    L     |     0 hrs      |     2 hrs     |    2 hrs   |
+| TOTAL               |          |     41 hrs      |     33 hrs    |     33 hrs     |
 
 <br>
 
