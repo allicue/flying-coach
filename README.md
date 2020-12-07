@@ -177,8 +177,39 @@ src
 
 ## Code Showcase
 
-> TBD
+> Search Functionality
+
+```
+  const handleSearch = e => {
+    const newQueriedDestinations = props.destinations.filter(country => country.country_name.toLowerCase().includes(e.target.value.toLowerCase()))
+   props.setQueriedDestinations(newQueriedDestinations)
+  }
+  const handleSubmit = e => e.preventDefault()
+
+  const destinationJSX = props.queriedDestinations.map((destination) =>
+    <Destination id={destination.id} country_name={destination.country_name} hero_img={destination.hero_img} price={destination.price}/>
+)
+```
 
 ## Code Issues & Resolutions
 
-> TBD
+> Had an issue with adding activities but was able to resolve it by adding in some of my handleChange code into handleDropDownChange function in order to properly assign the destination_id's value to formData.
+```
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }))
+  }
+
+  const handleDropDownChange = (e) => {
+    const { value } = e.target;
+    setDestinationId(value);
+    setFormData(prevState => ({
+      ...prevState,
+      destination_id: value
+    }))
+  }
+
+```
